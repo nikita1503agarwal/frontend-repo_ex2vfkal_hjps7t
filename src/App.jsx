@@ -6,8 +6,8 @@ import CTA from './components/CTA'
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Simple top bar */}
-      <header className="fixed top-0 inset-x-0 z-30 border-b border-white/10 bg-slate-950/50 backdrop-blur">
+      {/* Top bar */}
+      <header className="fixed top-0 inset-x-0 z-30 border-b border-white/10 bg-slate-950/60 backdrop-blur">
         <div className="container mx-auto px-6 md:px-10 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400" />
@@ -26,12 +26,13 @@ function App() {
         <Features />
         <Bonus />
         {/* AI Section */}
-        <section className="relative py-20 bg-slate-950">
-          <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_20%_20%,rgba(16,185,129,0.12),transparent),radial-gradient(500px_250px_at_80%_10%,rgba(59,130,246,0.12),transparent)]" />
+        <section className="relative py-24 bg-slate-950">
+          <div className="absolute inset-0 bg-[radial-gradient(800px_320px_at_20%_0%,rgba(16,185,129,0.12),transparent),radial-gradient(700px_300px_at_80%_0%,rgba(59,130,246,0.12),transparent)]" />
           <div className="relative container mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Engineer viral content with AI</h2>
-              <p className="mt-4 text-white/75">Tap into guided prompts and blueprints for ideation, scripting, and editing. Learn how to combine timing, pattern interrupts, and retention mechanics so the algorithm works for you.</p>
+              <p className="text-sm uppercase tracking-widest text-white/60">AI Workflows</p>
+              <h2 className="mt-2 text-4xl md:text-6xl font-bold tracking-tight">Engineer viral content with AI</h2>
+              <p className="mt-4 text-white/75">Guided prompts and blueprints for ideation, scripting, and editing. Combine timing, pattern interrupts, and retention mechanics so the algorithm works for you.</p>
               <ul className="mt-6 space-y-3 text-white/80">
                 <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-emerald-400"/> Hook generators and angle matrices</li>
                 <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-cyan-400"/> Long-to-short repurposing flows</li>
