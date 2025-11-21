@@ -1,71 +1,72 @@
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Bonus from './components/Bonus'
+import CTA from './components/CTA'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
+    <div className="min-h-screen bg-slate-950 text-white">
+      {/* Simple top bar */}
+      <header className="fixed top-0 inset-x-0 z-30 border-b border-white/10 bg-slate-950/50 backdrop-blur">
+        <div className="container mx-auto px-6 md:px-10 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400" />
+            <span className="font-semibold tracking-tight">HyperContent Lab</span>
           </div>
+          <nav className="hidden sm:flex items-center gap-6 text-sm text-white/80">
+            <a href="#details" className="hover:text-white">What’s Inside</a>
+            <a href="#buy" className="hover:text-white">Pricing</a>
+            <a href="#buy" className="px-3 py-1.5 rounded-lg bg-emerald-500 text-slate-900 font-semibold hover:bg-emerald-400 transition">Buy</a>
+          </nav>
+        </div>
+      </header>
 
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
+      <main className="pt-14">
+        <Hero />
+        <Features />
+        <Bonus />
+        {/* AI Section */}
+        <section className="relative py-20 bg-slate-950">
+          <div className="absolute inset-0 bg-[radial-gradient(600px_300px_at_20%_20%,rgba(16,185,129,0.12),transparent),radial-gradient(500px_250px_at_80%_10%,rgba(59,130,246,0.12),transparent)]" />
+          <div className="relative container mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Engineer viral content with AI</h2>
+              <p className="mt-4 text-white/75">Tap into guided prompts and blueprints for ideation, scripting, and editing. Learn how to combine timing, pattern interrupts, and retention mechanics so the algorithm works for you.</p>
+              <ul className="mt-6 space-y-3 text-white/80">
+                <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-emerald-400"/> Hook generators and angle matrices</li>
+                <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-cyan-400"/> Long-to-short repurposing flows</li>
+                <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-blue-400"/> Thumbnail/title split-tests and scripts</li>
+              </ul>
+              <div className="mt-8">
+                <a href="#buy" className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-medium backdrop-blur transition">See pricing</a>
               </div>
             </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
+            <div>
+              <div className="relative p-1 rounded-2xl bg-gradient-to-r from-emerald-400/60 via-cyan-400/60 to-blue-400/60">
+                <div className="rounded-2xl bg-slate-900 p-6">
+                  <div className="grid grid-cols-2 gap-3">
+                    {['Hooks Lab','Script Forge','Idea Matrix','Repurpose OS','Title/Thumb','Analytics'].map((x) => (
+                      <div key={x} className="aspect-video rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/70 text-sm">{x}</div>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-center text-sm text-white/70">Tooling you’ll master inside the program</p>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+        <CTA />
+      </main>
 
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+      <footer className="relative border-t border-white/10 bg-slate-950/70">
+        <div className="container mx-auto px-6 md:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/60 text-sm">© {new Date().getFullYear()} HyperContent Lab. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-sm text-white/70">
+            <a href="#details" className="hover:text-white">Curriculum</a>
+            <a href="#buy" className="hover:text-white">Buy</a>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
