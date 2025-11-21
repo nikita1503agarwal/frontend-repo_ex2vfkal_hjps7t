@@ -2,7 +2,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[92vh] overflow-hidden bg-[#0A0A0B]">
+    <section className="relative w-full min-h-[92vh] overflow-hidden">
       {/* 3D Spline background */}
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/LU2mWMPbF3Qi1Qxh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
@@ -14,7 +14,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="container mx-auto px-6 md:px-10 pt-28 pb-24">
+        <div className="container mx-auto px-6 md:px-10 pt-28 pb-16">
           <div className="max-w-5xl">
             <div className="inline-flex items-center gap-2 text-xs md:text-sm text-white/90 bg-white/5 border border-[#D4AF37]/30 px-3 py-1 rounded-full backdrop-blur">
               <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
@@ -31,31 +31,29 @@ export default function Hero() {
               <a href="#buy" className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-[#D4AF37]/40 text-white hover:bg-[#D4AF37]/10 font-semibold transition">
                 Jetzt starten
               </a>
-              <a href="#details" className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/90 font-medium backdrop-blur transition">
-                Inhalte ansehen
+              <a href="#buy" className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/90 font-medium backdrop-blur transition">
+                Preis & Inhalte ansehen
               </a>
             </div>
 
-            {/* Social proof */}
-            <div className="mt-10 grid gap-6 sm:grid-cols-3 max-w-3xl">
-              <div className="rounded-xl border border-[#D4AF37]/25 bg-black/40 p-4 backdrop-blur">
-                <p className="text-2xl font-bold text-white">2,300+</p>
-                <p className="text-white/70 text-sm">Creators trainiert</p>
-              </div>
-              <div className="rounded-xl border border-[#D4AF37]/25 bg-black/40 p-4 backdrop-blur">
-                <p className="text-2xl font-bold text-white">4.9/5</p>
-                <p className="text-white/70 text-sm">Durchschnitts­bewertung</p>
-              </div>
-              <div className="rounded-xl border border-[#D4AF37]/25 bg-black/40 p-4 backdrop-blur">
-                <p className="text-2xl font-bold text-white">60 min</p>
-                <p className="text-white/70 text-sm">von Idee zu Live</p>
-              </div>
+            {/* Persuasion strip (no hard section) */}
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {[
+                {k:'Proof', h:'4.9/5', d:'Bewertet von 2.300+ Creators'},
+                {k:'Zeitgewinn', h:'10+ Std', d:'pro Woche durch Vorlagen'},
+                {k:'Umsetzung', h:'60 Min', d:'von Idee bis Veröffentlichung'},
+              ].map((c)=> (
+                <div key={c.k} className="rounded-xl border border-[#D4AF37]/25 bg-black/40 p-5 backdrop-blur">
+                  <p className="text-2xl font-bold text-white">{c.h}</p>
+                  <p className="text-white/70 text-sm">{c.d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Floating preview cards */}
-        <div className="pointer-events-none relative container mx-auto px-6 md:px-10 pb-12">
+        <div className="pointer-events-none relative container mx-auto px-6 md:px-10 pb-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
             {['Hooks Lab','Script Forge','Idea Matrix','Repurpose OS','Title/Thumb','Analytics','Brand Kits','Templates'].map((x) => (
               <div key={x} className="aspect-[4/3] rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center text-white/70 text-sm">

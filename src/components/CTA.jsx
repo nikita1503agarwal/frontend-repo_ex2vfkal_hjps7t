@@ -1,7 +1,6 @@
 export default function CTA() {
   return (
-    <section id="buy" className="relative py-28 bg-black">
-      <div className="absolute inset-0 pointer-events-none [background-image:radial-gradient(900px_340px_at_80%_10%,rgba(212,175,55,0.2),transparent)]" />
+    <section id="buy" className="relative py-24">
       <div className="relative container mx-auto px-6 md:px-10">
         <div className="max-w-5xl mx-auto">
           <div className="rounded-3xl border border-[#D4AF37]/25 bg-gradient-to-br from-black via-black/70 to-black p-8 md:p-12 text-center backdrop-blur">
